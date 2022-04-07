@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "get-ssl-certificate": "^2.3.3"
+  }
+}
