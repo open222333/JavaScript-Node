@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "get-ssl-certificate": "^2.3.3"
+    "dns-sync": "^0.2.1",
+    "get-ssl-certificate": "^2.3.3",
+    "aws-sdk": "^2.1110.0",
+    "dateformat": "^3.0.3"
   }
 }
