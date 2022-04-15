@@ -1,3 +1,5 @@
+let dnsSync = require('dns-sync');
+
 function getAllRecords(domain) {
   let dnsSync = require('dns-sync');
   let result_records = {};
@@ -16,4 +18,5 @@ function getAllRecords(domain) {
   return result_records;
 }
 
-getAllRecords()
+record = dnsSync.resolve('www.google.com')
+console.log(record)

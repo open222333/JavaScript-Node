@@ -1,0 +1,13 @@
+{
+  "ignored_contents": [
+    "sample.sample.com$"
+  ],
+  "ignored_subdomains": [
+    "^nl\\.",
+    "^ns\\.",
+    "^fl\\.",
+    "^fs\\.",
+    "^proxy\\-",
+    "^ngs10\\d\\."
+  ]
+}
