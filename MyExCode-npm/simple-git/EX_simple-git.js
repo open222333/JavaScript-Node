@@ -55,6 +55,35 @@ async function do_commit(git, filename, commit_msg) {
   }
 }
 
+async function do_commi_2(git, filename, commit_msg) {
+  // 使用is_commit判斷是否有修改
+  // filename 若為. 則全部提交
+  // let status = await git.status();
+  // console.log(status);
+  // let is_commit = status.files.length;
+  // console.log(is_commit);
+  let status = is_commit(git);
+  if (status) {
+    await git.add(filename);
+    let message = await git.commit(commit_msg);
+    console.log(message);
+  }
+}
+
+async function is_commit(git) {
+  // 返回 修改數量
+  // git 內容為 simpleGit('/Users/4ge0/Desktop/test_js_tool/test2');
+  let status = await git.status();
+  console.log(status);
+  let is_commit = status.files.length;
+  console.log(is_commit);
+  if (is_commit > 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 async function do_push(git, remote, branch) {
   let message = await git.push(remote, branch);
   console.log(message);
@@ -62,4 +91,5 @@ async function do_push(git, remote, branch) {
 
 // let a = test_path.diff();
 // console.log(a);
-do_commit(git, '.', 'ddddd')
+do_commi_2(git, '.', '20220704');
+// is_commit(git);
