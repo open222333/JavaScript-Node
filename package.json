@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "aws-sdk": "^2.1110.0",
+    "cloudflare": "^2.9.1",
     "dateformat": "^3.0.3",
     "dns-sync": "^0.2.1",
     "get-ssl-certificate": "^2.3.3",
